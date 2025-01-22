@@ -83,9 +83,11 @@ async function sendMessage(event, form) {
     event.preventDefault();
     let formData = new FormData(form);
     let message = `${formData.get('name')}\n${formData.get('email')}\n${formData.get('message')}`;
+    messageFormData = new FormData();
+    messageFormData.append('message', message)
     await fetch('https://tracker.troopflow.com/notify.php', {
         method: "POST",
-        body: JSON.stringify({ message })
+        body: messageFormData
     })
 }
 
