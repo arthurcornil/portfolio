@@ -22,3 +22,8 @@ function triggerMenu() {
     }
     menu.classList.add('hidden');
 }
+
+const menu = document.querySelector('#mobileMenu');
+menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => triggerMenu());
+});
