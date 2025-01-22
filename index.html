@@ -122,9 +122,9 @@
                     <h1 class="text-4xl md:text-7xl text-primary font-extrabold">développeur<span class="text-white">.</span></h1>
                     <p class="text-gray text-lg md:text-xl max-w-[300px] md:max-w-[350px] pt-6">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
                 </div>
-                <button class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">
+                <a class="w-52 h-14 flex justify-center items-center bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white" href="#contact">
                     Me contacter
-                </button>
+                </a>
                 <a href="#about">
                     <img src="assets/arrow.png" alt="" class="relative top-24 md:top-32 animate-bounce"/>
                 </a>
@@ -170,19 +170,19 @@
             <section class="min-h-fit py-16 md:py-40 px-4 md:px-40 items-center flex flex-col gap-5" id="contact">
                 <h1 class="text-5xl text-white font-extrabold">Construisons votre <span class="text-primary">projet</span> !</h1>
                 <p class="text-gray text-lg">Vous pouvez aussi m'envoyer un mail si vous préférez : <a class="underline" href="mailto:arthur@buildthe.world">arthur@buildthe.world</a></p>
-                <form action="" class="flex flex-col gap-4 w-full md:w-[800px] pt-10 items-end">
+                <form action="" class="flex flex-col gap-4 w-full md:w-[800px] pt-10 items-end" onsubmit="(async () => { await sendMessage(event, this); })(); return false;">
                     <div class="flex flex-col md:flex-row gap-4 w-full">
                         <label for="name" class="text-white flex-grow text-lg">Nom
-                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="text" placeholder="Aaron Swartz">
+                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="text" placeholder="Aaron Swartz" name="name" required>
                         </label>
                         <label for="email" class="text-white flex-grow text-lg">Adresse e-mail
-                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="text" placeholder="aaron.swartz@mail.com">
+                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="email" placeholder="aaron.swartz@mail.com" name="email" required>
                         </label>
                     </div>
                     <label for="message" class="text-white w-full text-lg">Message
-                        <textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" placeholder="Votre message ..." rows="10"></textarea>
+                        <textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" placeholder="Votre message ..." rows="10" name="message" required></textarea>
                     </label>
-                    <button type="button" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">
+                    <button type="submit" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">
                         Envoyer
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>

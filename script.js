@@ -79,6 +79,16 @@ function openModal(projectName) {
     modal.showModal();
 }
 
+async function sendMessage(event, form) {
+    event.preventDefault();
+    let formData = new FormData(form);
+    let message = `${formData.get('name')}\n${formData.get('email')}\n${formData.get('message')}`;
+    await fetch('https://tracker.troopflow.com/notify.php', {
+        method: "POST",
+        body: JSON.stringify({ message })
+    })
+}
+
 document.querySelector('#projectModal').addEventListener('click', function(event) {
     if (event.target === this) {
         this.close();
