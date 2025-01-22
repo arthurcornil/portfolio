@@ -77,7 +77,9 @@
                     
                     <!-- Mobile menu button -->
                     <div class="md:hidden">
-                        <button type="button" class="text-white hover:bg-white hover:bg-opacity-10 p-2 rounded-md">
+                        <button type="button" class="text-white hover:bg-white hover:bg-opacity-10 p-2 rounded-md"
+                            onclick="triggerMenu();"
+                        >
                             <i class="fa-solid fa-bars"></i>
                         </button>
                     </div>
@@ -96,7 +98,7 @@
             </div>
 
             <!-- Mobile menu panel -->
-            <div class="hidden md:hidden">
+            <div class="hidden md:hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <a href="#about" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">À propos</a>
                     <a href="#projects" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Projets</a>
