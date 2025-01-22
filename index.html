@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arthur Cornil - Développeur freelance en Belgique</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Chau+Philomene+One:ital@0;1&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/b79cbe2f27.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#439CBC',
+                        secondary: '#38809A',
+                        black: '#112127',
+                        gray: '#EAF3ED'
+                    },
+                    fontFamily: {
+                        "sans": ['Akatab', 'sans-serif']
+                    },
+                    animation: {
+                        'spin-slow': 'spin 10s linear infinite',
+                    }
+                }
+            }
+        }
+        </script>
+        <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        @keyframes move1 {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(300px) translateY(400px);
+            }
+        }
+        @keyframes move2 {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-300px) translateY(200px);
+            }
+        }
+        @keyframes move3 {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(600px) translateY(-400px);
+            }
+        }
+        </style>
+    </head>
+    <body class="bg-black">
+        <nav class="fixed z-50 flex w-screen justify-between px-40 h-20 items-center backdrop-blur-md">
+            <div class="flex items-center gap-2">
+                <img src="assets/fav.png" alt="" class="h-12 w-12">
+                <span class="text-white text-xl font-black max-w-40 leading-5">BUILD THE WORLD.</span>
+            </div>
+            <div class="flex gap-5">
+                <a href="#about" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">À propos</a>
+                <a href="#projects" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Projets</a>
+                <a href="" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Blog</a>
+            </div>
+            <a href="https://github.com/arthurcornil" target="_blank">
+                <i class="fa-brands fa-github text-white fa-xl"></i>
+            </a>
+        </nav>
+        <div class="bg-primary h-40 w-40 rounded-full absolute blur-3xl top-32" style="animation: move1 8s infinite alternate ease-in-out"></div>
+        <div class="bg-primary h-72 w-72 rounded-full absolute blur-3xl top-96 right-10" style="animation: move2 10s infinite alternate ease-in-out"></div>
+        <div class="bg-primary h-56 w-56 rounded-full absolute blur-3xl top-[500px] left-20" style="animation: move3 12s infinite alternate ease-in-out"></div>
+        <main class="relative flex flex-col gap-10">
+            <section class="min-h-[50rem] flex flex-col items-center justify-center gap-14 px-6 pt-32">
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="text-7xl text-white font-extrabold">Je suis Arthur,</h1>
+                    <h1 class="text-7xl text-primary font-extrabold">développeur</h1>
+                    <p class="text-gray text-xl max-w-[350px] pt-6">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
+                </div>
+                <button class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-2 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">Me contacter</button>
+                <img src="assets/arrow.png" alt="" class="relative top-32 animate-bounce"/>
+            </section>
+            <section class="min-h-[40rem] px-40 flex items-center justify-around" id="about">
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <h2 class="text-white text-5xl font-extrabold">Hello ! 👋</h2>
+                        <h2 class="text-white text-5xl font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
+                    </div>
+                    <p class="text-gray text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique et de pleins d'autres choses. J'aime résoudre des problèmes et fournir un travail bien fait.</p>
+                    <p class="text-gray text-xl max-w-[40rem]">Bien qu'étant spécialisé dans le développement web, je suis polyvalent et je m'intéresse à beaucoup d'autres technologies.</p>
+                </div>
+                <img src="assets/arthur.png" alt=""/>
+            </section>
+            <section class="min-h-[40rem] px-40 flex items-center justify-around" id="projects">
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <h2 class="text-white text-5xl font-extrabold">Je fais des trucs</h2>
+                        <h2 class="text-white text-5xl font-extrabold">sur <span class="text-primary">internet</span>.</h2>
+                    </div>
+                    <p class="text-gray text-xl max-w-[30rem]">Découvrez trois de mes derniers projets. Certains sont des side projects et d'autres sont réalisés en Freelance pour mes clients. </p>
+                </div>
+                <div class="relative flex gap-7 p-14 border-2 border-dashed border-gray rounded-xl bg-gray bg-opacity-10">
+                    <img src="assets/sticker.png" alt="" class="absolute top-[-85px] left-[-85px] h-40 w-40 animate-spin-slow"/>
+                    <img src="assets/troopflow.png" alt=""/>
+                    <img src="assets/scouts.png" alt=""/>
+                    <img src="assets/propic.png" alt=""/>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
