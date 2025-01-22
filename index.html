@@ -10,6 +10,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://kit.fontawesome.com/b79cbe2f27.js" crossorigin="anonymous"></script>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="style.css">
         <script>
         tailwind.config = {
             theme: {
@@ -159,12 +160,53 @@
                 </div>
                 <div class="relative grid grid-cols-2 md:grid-cols-3 gap-7 p-12 md:p-14 rounded-2xl bg-gray bg-opacity-10 max-w-full">
                     <img src="assets/sticker.png" alt="" id="sticker" class="absolute md:top-[-85px] md:left-[-85px] right-[-20px] top-[-40px] size-24 md:size-40 rotate-12 block"/>
-                    <img src="assets/troopflow.png" alt="" class="max-w-full md:max-w-[200px]"/>
-                    <img src="assets/scouts.png" alt="" class="max-w-full md:max-w-[200px]"/>
-                    <img src="assets/propic.png" alt="" class="max-w-full md:max-w-[200px]"/>
+                    <img src="assets/troopflow.png" alt="" class="max-w-full md:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('troopflow');"/>
+                    <img src="assets/scouts.png" alt="" class="max-w-full md:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('scouts');"/>
+                    <img src="assets/propic.png" alt="" class="max-w-full md:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('propic');"/>
                 </div>
             </section>
+            <section class="min-h-fit py-16 md:py-40 px-4 md:px-40 items-center flex flex-col gap-5" id="contact">
+                <h1 class="text-5xl text-white font-extrabold">Construisons votre <span class="text-primary">projet</span> !</h1>
+                <p class="text-gray text-lg">Vous pouvez aussi m'envoyer un mail si vous préférez : <a class="underline" href="mailto:arthur@buildthe.world">arthur@buildthe.world</a></p>
+                <form action="" class="flex flex-col gap-4 w-full md:w-[800px] pt-10 items-end">
+                    <div class="flex flex-col md:flex-row gap-4 w-full">
+                        <label for="name" class="text-white flex-grow text-lg">Nom
+                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="text" placeholder="Aaron Swartz">
+                        </label>
+                        <label for="email" class="text-white flex-grow text-lg">Adresse e-mail
+                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="text" placeholder="aaron.swartz@mail.com">
+                        </label>
+                    </div>
+                    <label for="message" class="text-white w-full text-lg">Message
+                        <textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" placeholder="Votre message ..." rows="10"></textarea>
+                    </label>
+                    <button type="button" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">
+                        Envoyer
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </section>
         </main>
+        <dialog id="projectModal" class="p-10 rounded-xl bg-black text-white max-w-[500px]">
+            <div class="flex flex-col gap-5 items-start">
+                <div class="flex gap-5 items-center">
+                    <img src="" alt="" class="size-20 project-logo">
+                    <div class="flex flex-col">
+                        <span class="project-title text-white text-3xl font-bold"></span>
+                        <span class="project-subtitle text-gray text-lg font-bold"></span>
+                    </div>
+                </div>
+                <p class="project-description text-gray"></p>
+                <div class="flex w-full gap-2 project-stack">
+                </div>
+                <div class="w-full flex justify-end pt-5">
+                    <a class="button w-fit px-10 py-3 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white project-link" href="#" target="_blank">
+                        Voir le projet
+                        <i class="fa-solid fa-arrow-right text-white fa-lg ml-1 relative top-[2px]"></i>
+                    <a>
+                </div>
+            </div>
+        </dialog>
     </body>
     <script src="script.js"></script>
 </html>
