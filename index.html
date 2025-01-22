@@ -35,53 +35,27 @@
             scroll-behavior: smooth;
         }
         @keyframes move1 {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(300px) translateY(400px);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px) translateY(400px); }
         }
         @keyframes move2 {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-300px) translateY(200px);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-300px) translateY(200px); }
         }
         @keyframes move3 {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(600px) translateY(-400px);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(600px) translateY(-400px); }
         }
         @keyframes wave {
-            0% {
-                transform: rotate(0deg);
-            }
-            20% {
-                transform: rotate(-30deg);
-            }
-            60% {
-                transform: rotate(50deg);
-            }
-            100% {
-                transform: rotate(0deg);
-            }
+            0% { transform: rotate(0deg); }
+            20% { transform: rotate(-30deg); }
+            60% { transform: rotate(50deg); }
+            100% { transform: rotate(0deg); }
         }
         @keyframes spin {
-            0% {
-                transform: rotate(12deg);
-            }
-            80% {
-                transform: rotate(400deg);
-            }
-            100% {
-                transform: rotate(372deg);
-            }
+            0% { transform: rotate(12deg); }
+            80% { transform: rotate(400deg); }
+            100% { transform: rotate(372deg); }
         }
         .wave {
             animation: wave 1s ease-in-out;
@@ -92,65 +66,99 @@
         </style>
     </head>
     <body class="bg-black">
-        <nav class="fixed z-50 flex w-screen justify-between px-40 h-20 items-center backdrop-blur-md">
-            <div class="flex items-center gap-2">
-                <img src="assets/fav.png" alt="" class="h-12 w-12">
-                <span class="text-white text-xl font-black max-w-40 leading-5">BUILD THE <span class="text-primary">WORLD</span>.</span>
-            </div>
-            <div class="flex gap-5">
-                <a href="#about" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">À propos</a>
-                <a href="#projects" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Projets</a>
-                <a href="" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Blog</a>
-            </div>
-            <a href="https://github.com/arthurcornil" target="_blank">
-                <i class="fa-brands fa-github text-white fa-xl"></i>
-            </a>
-        </nav>
-        <div class="bg-primary h-40 w-40 rounded-full absolute blur-3xl top-32" style="animation: move1 8s infinite alternate ease-in-out"></div>
-        <div class="bg-primary h-72 w-72 rounded-full absolute blur-3xl top-96 right-10" style="animation: move2 10s infinite alternate ease-in-out"></div>
-        <div class="bg-primary h-56 w-56 rounded-full absolute blur-3xl top-[500px] left-20" style="animation: move3 12s infinite alternate ease-in-out"></div>
-        <main class="relative flex flex-col gap-10">
-            <section class="min-h-[50rem] flex flex-col items-center justify-center gap-14 px-6 pt-32">
-                <div class="flex flex-col items-center text-center">
-                    <h1 class="text-7xl text-white font-extrabold">Je suis Arthur,</h1>
-                    <h1 class="text-7xl text-primary font-extrabold">développeur<span class="text-white">.</span> </h1>
-                    <p class="text-gray text-xl max-w-[350px] pt-6">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
+        <!-- Responsive Navigation -->
+        <nav class="fixed z-50 w-screen backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-20 items-center">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/fav.png" alt="" class="h-12 w-12">
+                        <span class="text-white text-xl font-black max-w-40 leading-5">BUILD THE <span class="text-primary">WORLD</span>.</span>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button type="button" class="text-white hover:bg-white hover:bg-opacity-10 p-2 rounded-md">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex gap-5">
+                        <a href="#about" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">À propos</a>
+                        <a href="#projects" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Projets</a>
+                        <a href="" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Blog</a>
+                    </div>
+
+                    <a href="https://github.com/arthurcornil" target="_blank" class="hidden md:block">
+                        <i class="fa-brands fa-github text-white fa-xl"></i>
+                    </a>
                 </div>
-                <button class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">Me contacter</button>
+            </div>
+
+            <!-- Mobile menu panel -->
+            <div class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#about" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">À propos</a>
+                    <a href="#projects" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Projets</a>
+                    <a href="" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Blog</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Background animations -->
+        <div class="bg-primary h-40 w-40 rounded-full absolute blur-3xl top-32 hidden md:block" style="animation: move1 8s infinite alternate ease-in-out"></div>
+        <div class="bg-primary h-72 w-72 rounded-full absolute blur-3xl top-96 right-10 hidden md:block" style="animation: move2 10s infinite alternate ease-in-out"></div>
+        <div class="bg-primary h-56 w-56 rounded-full absolute blur-3xl top-[500px] left-20 hidden md:block" style="animation: move3 12s infinite alternate ease-in-out"></div>
+
+        <main class="relative flex flex-col gap-10">
+            <!-- Hero Section -->
+            <section class="min-h-screen flex flex-col items-center justify-center gap-14 px-4 md:px-6 pt-20 md:pt-32">
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="text-4xl md:text-7xl text-white font-extrabold">Je suis Arthur,</h1>
+                    <h1 class="text-4xl md:text-7xl text-primary font-extrabold">développeur<span class="text-white">.</span></h1>
+                    <p class="text-gray text-lg md:text-xl max-w-[350px] pt-6">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
+                </div>
+                <button class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">
+                    Me contacter
+                </button>
                 <img src="assets/arrow.png" alt="" class="relative top-32 animate-bounce"/>
             </section>
-            <section class="min-h-[40rem] px-40 flex items-center justify-around" id="about">
+
+            <!-- About Section -->
+            <section class="min-h-screen px-4 md:px-40 py-20 flex flex-col-reverse md:flex-row items-center justify-around gap-10" id="about">
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h2 class="text-white text-5xl font-extrabold">Hello ! <span id="hand" class="inline-block">👋</span></h2>
-                        <h2 class="text-white text-5xl font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
+                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">Hello ! <span id="hand" class="inline-block">👋</span></h2>
+                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
                     </div>
-                    <p class="text-gray text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique et de pleins d'autres choses. J'aime résoudre des problèmes et fournir un travail bien fait.</p>
-                    <p class="text-gray text-xl max-w-[40rem]">Bien qu'étant spécialisé dans le développement web, je suis polyvalent et je m'intéresse à beaucoup d'autres technologies.</p>
+                    <p class="text-gray text-lg md:text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique et de pleins d'autres choses. J'aime résoudre des problèmes et fournir un travail bien fait.</p>
+                    <p class="text-gray text-lg md:text-xl max-w-[40rem]">Bien qu'étant spécialisé dans le développement web, je suis polyvalent et je m'intéresse à beaucoup d'autres technologies.</p>
                     <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
                         onclick="wave();">
                         <i class="fa-solid fa-hand text-white"></i>
                     </button>
                 </div>
-                <img src="assets/arthur.png" alt=""/>
+                <img src="assets/arthur.png" alt="" class="max-w-full md:max-w-[400px]"/>
             </section>
-            <section class="min-h-[40rem] px-40 flex items-center justify-around" id="projects">
+
+            <!-- Projects Section -->
+            <section class="min-h-screen px-4 md:px-40 py-20 flex flex-col md:flex-row items-center justify-around gap-10" id="projects">
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h2 class="text-white text-5xl font-extrabold">Je fais des trucs</h2>
-                        <h2 class="text-white text-5xl font-extrabold">sur <span class="text-primary">internet</span>.</h2>
+                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">Je fais des trucs</h2>
+                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">sur <span class="text-primary">internet</span>.</h2>
                     </div>
-                    <p class="text-gray text-xl max-w-[30rem]">Découvrez trois de mes derniers projets. Certains sont des side projects et d'autres sont réalisés en Freelance pour mes clients. </p>
+                    <p class="text-gray text-lg md:text-xl max-w-[30rem]">Découvrez trois de mes derniers projets. Certains sont des side projects et d'autres sont réalisés en Freelance pour mes clients.</p>
                     <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
                         onclick="animateSticker();">
                         <i class="fa-solid fa-arrow-rotate-left text-white"></i>
                     </button>
                 </div>
-                <div class="relative flex gap-7 p-14 rounded-xl bg-gray bg-opacity-10">
-                    <img src="assets/sticker.png" alt="" id="sticker" class="absolute top-[-85px] left-[-85px] h-40 w-40 rotate-12"/>
-                    <img src="assets/troopflow.png" alt=""/>
-                    <img src="assets/scouts.png" alt=""/>
-                    <img src="assets/propic.png" alt=""/>
+                <div class="relative grid grid-cols-2 md:grid-cols-3 gap-7 p-12 md:p-14 rounded-xl bg-gray bg-opacity-10 max-w-full">
+                    <img src="assets/sticker.png" alt="" id="sticker" class="absolute md:top-[-85px] md:left-[-85px] right-[-40px] top-[-40px] size-24 md:size-40 rotate-12 block"/>
+                    <img src="assets/troopflow.png" alt="" class="max-w-full md:max-w-[200px]"/>
+                    <img src="assets/scouts.png" alt="" class="max-w-full md:max-w-[200px]"/>
+                    <img src="assets/propic.png" alt="" class="max-w-full md:max-w-[200px]"/>
                 </div>
             </section>
         </main>
