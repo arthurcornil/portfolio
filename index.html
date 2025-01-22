@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Arthur Cornil - Développeur freelance en Belgique</title>
+        <title>Build The World - Développeur créatif & ambitieux</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Chau+Philomene+One:ital@0;1&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
                         "sans": ['Akatab', 'sans-serif']
                     },
                     animation: {
-                        'spin-slow': 'spin 10s linear infinite',
+                        'spin-slow': 'spin 1s linear',
                     }
                 }
             }
@@ -58,13 +58,44 @@
                 transform: translateX(600px) translateY(-400px);
             }
         }
+        @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
+            20% {
+                transform: rotate(-30deg);
+            }
+            60% {
+                transform: rotate(50deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(12deg);
+            }
+            80% {
+                transform: rotate(400deg);
+            }
+            100% {
+                transform: rotate(372deg);
+            }
+        }
+        .wave {
+            animation: wave 1s ease-in-out;
+        }
+        .spin {
+            animation: spin 1s ease-in-out;
+        }
         </style>
     </head>
     <body class="bg-black">
         <nav class="fixed z-50 flex w-screen justify-between px-40 h-20 items-center backdrop-blur-md">
             <div class="flex items-center gap-2">
                 <img src="assets/fav.png" alt="" class="h-12 w-12">
-                <span class="text-white text-xl font-black max-w-40 leading-5">BUILD THE WORLD.</span>
+                <span class="text-white text-xl font-black max-w-40 leading-5">BUILD THE <span class="text-primary">WORLD</span>.</span>
             </div>
             <div class="flex gap-5">
                 <a href="#about" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">À propos</a>
@@ -82,20 +113,24 @@
             <section class="min-h-[50rem] flex flex-col items-center justify-center gap-14 px-6 pt-32">
                 <div class="flex flex-col items-center text-center">
                     <h1 class="text-7xl text-white font-extrabold">Je suis Arthur,</h1>
-                    <h1 class="text-7xl text-primary font-extrabold">développeur</h1>
+                    <h1 class="text-7xl text-primary font-extrabold">développeur<span class="text-white">.</span> </h1>
                     <p class="text-gray text-xl max-w-[350px] pt-6">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
                 </div>
-                <button class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-2 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">Me contacter</button>
+                <button class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">Me contacter</button>
                 <img src="assets/arrow.png" alt="" class="relative top-32 animate-bounce"/>
             </section>
             <section class="min-h-[40rem] px-40 flex items-center justify-around" id="about">
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h2 class="text-white text-5xl font-extrabold">Hello ! 👋</h2>
+                        <h2 class="text-white text-5xl font-extrabold">Hello ! <span id="hand" class="inline-block">👋</span></h2>
                         <h2 class="text-white text-5xl font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
                     </div>
                     <p class="text-gray text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique et de pleins d'autres choses. J'aime résoudre des problèmes et fournir un travail bien fait.</p>
                     <p class="text-gray text-xl max-w-[40rem]">Bien qu'étant spécialisé dans le développement web, je suis polyvalent et je m'intéresse à beaucoup d'autres technologies.</p>
+                    <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
+                        onclick="wave();">
+                        <i class="fa-solid fa-hand text-white"></i>
+                    </button>
                 </div>
                 <img src="assets/arthur.png" alt=""/>
             </section>
@@ -106,9 +141,13 @@
                         <h2 class="text-white text-5xl font-extrabold">sur <span class="text-primary">internet</span>.</h2>
                     </div>
                     <p class="text-gray text-xl max-w-[30rem]">Découvrez trois de mes derniers projets. Certains sont des side projects et d'autres sont réalisés en Freelance pour mes clients. </p>
+                    <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
+                        onclick="animateSticker();">
+                        <i class="fa-solid fa-arrow-rotate-left text-white"></i>
+                    </button>
                 </div>
-                <div class="relative flex gap-7 p-14 border-2 border-dashed border-gray rounded-xl bg-gray bg-opacity-10">
-                    <img src="assets/sticker.png" alt="" class="absolute top-[-85px] left-[-85px] h-40 w-40 animate-spin-slow"/>
+                <div class="relative flex gap-7 p-14 rounded-xl bg-gray bg-opacity-10">
+                    <img src="assets/sticker.png" alt="" id="sticker" class="absolute top-[-85px] left-[-85px] h-40 w-40 rotate-12"/>
                     <img src="assets/troopflow.png" alt=""/>
                     <img src="assets/scouts.png" alt=""/>
                     <img src="assets/propic.png" alt=""/>
@@ -116,4 +155,5 @@
             </section>
         </main>
     </body>
+    <script src="script.js"></script>
 </html>
