@@ -85,10 +85,35 @@ async function sendMessage(event, form) {
     let message = `${formData.get('name')}\n${formData.get('email')}\n${formData.get('message')}`;
     messageFormData = new FormData();
     messageFormData.append('message', message)
-    await fetch('https://tracker.troopflow.com/notify.php', {
-        method: "POST",
-        body: messageFormData
-    })
+
+    //await fetch('https://tracker.troopflow.com/notify.php', {
+    //    method: "post",
+    //    body: messageFormData
+    //});
+
+    let inputs = Array.from(form.querySelectorAll('input'));
+    inputs.push(form.querySelector('textarea'));
+    inputs.forEach(input => {
+        input.value = ''
+    });
+
+    showToast();
+}
+
+function showToast() {
+    const toast = document.getElementById('sentMessageToast');
+    toast.classList.add('fade-in');
+    toast.classList.remove('hidden');
+
+    setTimeout(() => {
+        toast.classList.remove('fade-in');
+        toast.classList.add('fade-out');
+
+        setTimeout(() => {
+            toast.classList.add('hidden');
+            toast.classList.remove('fade-out');
+        }, 500);
+    }, 3000);
 }
 
 document.querySelector('#projectModal').addEventListener('click', function(event) {

@@ -68,7 +68,7 @@
     </head>
     <body class="bg-black">
         <!-- Responsive Navigation -->
-        <nav class="fixed z-50 w-screen backdrop-blur-md">
+        <nav class="fixed z-50 w-screen backdrop-blur-md z-[1]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20 items-center">
                     <a class="flex items-center gap-2" href="#top">
@@ -92,7 +92,7 @@
                         <a href="" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Blog</a>
                     </div>
 
-                    <a href="https://github.com/arthurcornil" target="_blank" class="hidden md:block">
+                    <a href="https://github.com/arthurcornil" target="_blank" class="hidden lg:block">
                         <i class="fa-brands fa-github text-white fa-xl"></i>
                     </a>
                 </div>
@@ -112,11 +112,11 @@
             <!-- Background animations -->
             <div class="absolute w-screen h-fit overflow-x-hidden overflow-y-visible pointer-events-none z-[0]" style="height: 200vh">
                 <div class="bg-primary h-40 w-40 rounded-full absolute blur-3xl top-32" style="animation: move1 8s infinite alternate ease-in-out"></div>
-                <div class="bg-primary h-72 w-72 rounded-full absolute blur-3xl top-72 md:top-96 right-[-150px] md:right-10" style="animation: move2 10s infinite alternate ease-in-out"></div>
-                <div class="bg-primary h-56 w-56 rounded-full absolute blur-3xl top-[500px] left-20 hidden md:block" style="animation: move3 12s infinite alternate ease-in-out"></div>
+                <div class="bg-primary h-72 w-72 rounded-full absolute blur-3xl top-72 lg:top-96 right-[-150px] lg:right-10" style="animation: move2 10s infinite alternate ease-in-out"></div>
+                <div class="bg-primary h-56 w-56 rounded-full absolute blur-3xl top-[500px] left-20 hidden lg:block" style="animation: move3 12s infinite alternate ease-in-out"></div>
             </div>
             <!-- Hero Section -->
-            <section class="min-h-screen flex flex-col items-center justify-center gap-14 px-4 md:px-6 pt-20 md:pt-32 z-[1]">
+            <section class="min-h-screen flex flex-col items-center justify-center gap-14 px-4 md:px-6 pt-20 lg:pt-32 z-[1]">
                 <div class="flex flex-col items-center text-center">
                     <h1 class="text-4xl md:text-7xl text-white font-extrabold">Je suis Arthur,</h1>
                     <h1 class="text-4xl md:text-7xl text-primary font-extrabold">développeur<span class="text-white">.</span></h1>
@@ -131,56 +131,56 @@
             </section>
 
             <!-- About Section -->
-            <section class="min-h-fit py-16 md:py-40 px-4 md:px-40 flex flex-col-reverse md:flex-row items-center justify-around gap-10" id="about">
+            <section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 flex flex-col-reverse lg:flex-row items-center justify-around gap-10" id="about">
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">Hello ! <span id="hand" class="inline-block">👋</span></h2>
-                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
+                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold">Hello ! <span id="hand" class="inline-block">👋</span></h2>
+                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
                     </div>
-                    <p class="text-gray text-lg md:text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique et de pleins d'autres choses. J'aime résoudre des problèmes et fournir un travail bien fait.</p>
-                    <p class="text-gray text-lg md:text-xl max-w-[40rem]">Bien qu'étant spécialisé dans le développement web, je suis polyvalent et je m'intéresse à beaucoup d'autres technologies.</p>
+                    <p class="text-gray text-lg lg:text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique et de pleins d'autres choses. J'aime résoudre des problèmes et fournir un travail bien fait.</p>
+                    <p class="text-gray text-lg lg:text-xl max-w-[40rem]">Bien qu'étant spécialisé dans le développement web, je suis polyvalent et je m'intéresse à beaucoup d'autres technologies.</p>
                     <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
                         onclick="wave();">
                         <i class="fa-solid fa-hand text-white"></i>
                     </button>
                 </div>
-                <img src="assets/arthur.png" alt="" class="max-w-full md:max-w-[350px]"/>
+                <img src="assets/arthur.png" alt="" class="max-w-full lg:max-w-[350px]"/>
             </section>
 
             <!-- Projects Section -->
-            <section class="min-h-fit py-16 md:py-40 px-4 md:px-40 flex flex-col md:flex-row items-center justify-around gap-10" id="projects">
+            <section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 flex flex-col lg:flex-row items-center justify-around gap-10" id="projects">
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">Je fais des trucs</h2>
-                        <h2 class="text-3xl md:text-5xl text-white font-extrabold">sur <span class="text-primary">internet</span>.</h2>
+                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold">Je fais des trucs</h2>
+                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold">sur <span class="text-primary">internet</span>.</h2>
                     </div>
-                    <p class="text-gray text-lg md:text-xl max-w-[30rem]">Découvrez trois de mes derniers projets. Certains sont des side projects et d'autres sont réalisés en Freelance pour mes clients.</p>
+                    <p class="text-gray text-lg lg:text-xl max-w-[40rem] lg:max-w-[30rem]">Découvrez trois de mes derniers projets. Certains sont des side projects et d'autres sont réalisés en Freelance pour mes clients.</p>
                     <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
                         onclick="animateSticker();">
                         <i class="fa-solid fa-arrow-rotate-right text-white"></i>
                     </button>
                 </div>
-                <div class="relative grid grid-cols-2 md:grid-cols-3 gap-7 p-12 md:p-14 rounded-2xl bg-gray bg-opacity-10 max-w-full">
-                    <img src="assets/sticker.png" alt="" id="sticker" class="absolute md:top-[-85px] md:left-[-85px] right-[-20px] top-[-40px] size-24 md:size-40 rotate-12 block"/>
-                    <img src="assets/troopflow.png" alt="" class="max-w-full md:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('troopflow');"/>
-                    <img src="assets/scouts.png" alt="" class="max-w-full md:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('scouts');"/>
-                    <img src="assets/propic.png" alt="" class="max-w-full md:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('propic');"/>
+                <div class="relative grid grid-cols-2 md:grid-cols-3 gap-7 p-12 lg:p-14 rounded-2xl bg-gray bg-opacity-10 max-w-full">
+                    <img src="assets/sticker.png" alt="" id="sticker" class="absolute lg:top-[-85px] lg:left-[-85px] right-[-20px] top-[-40px] size-24 lg:size-40 rotate-12 block"/>
+                    <img src="assets/troopflow.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('troopflow');"/>
+                    <img src="assets/scouts.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('scouts');"/>
+                    <img src="assets/propic.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('propic');"/>
                 </div>
             </section>
-            <section class="min-h-fit py-16 md:py-40 px-4 md:px-40 items-center flex flex-col gap-5" id="contact">
+            <section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 items-center flex flex-col gap-5" id="contact">
                 <h1 class="text-5xl text-white font-extrabold">Construisons votre <span class="text-primary">projet</span> !</h1>
                 <p class="text-gray text-lg">Vous pouvez aussi m'envoyer un mail si vous préférez : <a class="underline" href="mailto:arthur@buildthe.world">arthur@buildthe.world</a></p>
-                <form action="" class="flex flex-col gap-4 w-full md:w-[800px] pt-10 items-end" onsubmit="(async () => { await sendMessage(event, this); })(); return false;">
-                    <div class="flex flex-col md:flex-row gap-4 w-full">
+                <form action="" class="flex flex-col gap-4 w-full lg:w-[800px] pt-10 items-end" onsubmit="(async () => { await sendMessage(event, this); })(); return false;">
+                    <div class="flex flex-col lg:flex-row gap-4 w-full">
                         <label for="name" class="text-white flex-grow text-lg">Nom
-                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="text" placeholder="Aaron Swartz" name="name" required>
+                            <input class="mt-2 border border-gray rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" type="text" placeholder="Aaron Swartz" name="name" required>
                         </label>
                         <label for="email" class="text-white flex-grow text-lg">Adresse e-mail
-                            <input class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" type="email" placeholder="aaron.swartz@mail.com" name="email" required>
+                            <input class="mt-2 border border-gray rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" type="email" placeholder="aaron.swartz@mail.com" name="email" required>
                         </label>
                     </div>
                     <label for="message" class="text-white w-full text-lg">Message
-                        <textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white" placeholder="Votre message ..." rows="10" name="message" required></textarea>
+                        <textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" placeholder="Votre message ..." rows="10" name="message" required></textarea>
                     </label>
                     <button type="submit" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">
                         Envoyer
@@ -189,7 +189,7 @@
                 </form>
             </section>
         </main>
-        <dialog id="projectModal" class="p-10 rounded-xl bg-black text-white md:max-w-[500px] max-w-[350px]">
+        <dialog id="projectModal" class="p-10 rounded-xl bg-black text-white lg:max-w-[500px] max-w-[350px]">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex gap-5 items-center">
                     <img src="" alt="" class="size-20 project-logo">
@@ -209,6 +209,16 @@
                 </div>
             </div>
         </dialog>
+        <div id="sentMessageToast" class="flex items-center w-fit md:w-full max-w-sm py-5 px-6 text-black bg-gray rounded-xl shadow-sm fixed top-5 right-5 z-[2]" role="alert">
+            <div class="inline-flex space-x-3 items-center">
+                <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.87669 5.83334L6.79903 9.07942C8.55721 10.1343 9.4363 10.6618 10.4021 10.6388C11.368 10.6158 12.221 10.0471 13.927 8.9098L18.1233 5.83334M8.33335 16.6667H11.6667C14.8094 16.6667 16.3807 16.6667 17.357 15.6904C18.3334 14.7141 18.3334 13.1427 18.3334 10C18.3334 6.85731 18.3334 5.28596 17.357 4.30965C16.3807 3.33334 14.8094 3.33334 11.6667 3.33334H8.33335C5.19066 3.33334 3.61931 3.33334 2.643 4.30965C1.66669 5.28596 1.66669 6.85731 1.66669 10C1.66669 13.1427 1.66669 14.7141 2.643 15.6904C3.61931 16.6667 5.19066 16.6667 8.33335 16.6667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <p class="text-base font-medium">Votre message a été envoyé !</p>
+            </div>
+        </div>
     </body>
     <script src="script.js"></script>
 </html>
