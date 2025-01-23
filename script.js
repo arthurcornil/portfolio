@@ -45,15 +45,6 @@ function animateSticker() {
     }, { once: true });
 }
 
-function triggerMenu() {
-    const menu = document.querySelector('#mobileMenu');
-    if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        return ;
-    }
-    menu.classList.add('hidden');
-}
-
 const menu = document.querySelector('#mobileMenu');
 menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => triggerMenu());
