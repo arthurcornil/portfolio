@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Build The World - Développeur créatif & ambitieux</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Chau+Philomene+One:ital@0;1&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/b79cbe2f27.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#439CBC',
+                        secondary: '#38809A',
+                        black: '#112127',
+                        gray: '#EAF3ED'
+                    },
+                    fontFamily: {
+                        "sans": ['Akatab', 'sans-serif']
+                    },
+                    animation: {
+                        'spin-slow': 'spin 1s linear',
+                    }
+                }
+            }
+        }
+        </script>
+    </head>
+    <body class="bg-black">
+        <main class="relative flex flex-col gap-12">
+            <section class="min-h-screen px-4 md:px-96 py-5 lg:py-12 z-[1] text-gray" id="articleContainer">
+            </section>
+        </main>
+        <script src="postloader.js" type="module"></script>
+    </body>
+</html>
+
