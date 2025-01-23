@@ -86,10 +86,10 @@ async function sendMessage(event, form) {
     messageFormData = new FormData();
     messageFormData.append('message', message)
 
-    //await fetch('https://tracker.troopflow.com/notify.php', {
-    //    method: "post",
-    //    body: messageFormData
-    //});
+    await fetch('https://tracker.troopflow.com/notify.php', {
+        method: "post",
+        body: messageFormData
+    });
 
     let inputs = Array.from(form.querySelectorAll('input'));
     inputs.push(form.querySelector('textarea'));
