@@ -7,29 +7,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Chau+Philomene+One:ital@0;1&display=swap" rel="stylesheet">
-        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
         <script src="https://kit.fontawesome.com/b79cbe2f27.js" crossorigin="anonymous"></script>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-        <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#439CBC',
-                        secondary: '#38809A',
-                        black: '#112127',
-                        gray: '#EAF3ED'
-                    },
-                    fontFamily: {
-                        "sans": ['Akatab', 'sans-serif']
-                    },
-                    animation: {
-                        'spin-slow': 'spin 1s linear',
-                    }
-                }
-            }
+        <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #439CBC;
+            --color-secondary: #38809A;
+            --color-black: #112127;
+            --color-gray: #EAF3ED;
+            --font-sans: 'sans-serif', 'Akatab';
         }
-        </script>
+        </style>
     </head>
     <body class="bg-black">
         <!-- Responsive Navigation -->
@@ -43,7 +32,7 @@
                     
                     <!-- Mobile menu button -->
                     <div class="md:hidden">
-                        <button type="button" class="text-white hover:bg-white hover:bg-opacity-10 p-2 rounded-md"
+                        <button type="button" class="text-white hover:bg-white hover:bg-white/10 p-2 rounded-md"
                             onclick="triggerMenu();"
                         >
                             <i class="fa-solid fa-bars"></i>
@@ -52,9 +41,9 @@
 
                     <!-- Desktop menu -->
                     <div class="hidden md:flex gap-5">
-                        <a href="index.html#about" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">À propos</a>
-                        <a href="index.html#projects" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Projets</a>
-                        <a href="blog.html" class="text-white py-2 px-4 hover:bg-white hover:bg-opacity-10 transition-all duration-150 rounded-md">Blog</a>
+                        <a href="index.html#about" class="text-white py-2 px-4 hover:bg-white hover:bg-white/10 transition-all duration-150 rounded-md">À propos</a>
+                        <a href="index.html#projects" class="text-white py-2 px-4 hover:bg-white hover:bg-white/10 transition-all duration-150 rounded-md">Projets</a>
+                        <a href="blog.html" class="text-white py-2 px-4 hover:bg-white hover:bg-white/10 transition-all duration-150 rounded-md">Blog</a>
                     </div>
 
                     <a href="https://github.com/arthurcornil" target="_blank" class="hidden lg:block">
@@ -66,33 +55,32 @@
             <!-- Mobile menu panel -->
             <div class="hidden md:hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.html#about" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">À propos</a>
-                    <a href="index.html#projects" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Projets</a>
-                    <a href="blog.html" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Blog</a>
+                    <a href="index.html#about" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-white/10">À propos</a>
+                    <a href="index.html#projects" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-white/10">Projets</a>
+                    <a href="blog.html" class="text-white block px-3 py-2 rounded-md hover:bg-white hover:bg-white/10">Blog</a>
                 </div>
             </div>
         </nav>
 
-        <main class="relative flex flex-col gap-12">
-            <section class="min-h-screen flex flex-col items-center px-4 md:px-6 pt-24 lg:pt-32 z-[1]">
-                <a class="border-b border-white pb-6 mb-6 last:border-b-0" href="post.html?post=2">
+        <main class="relative flex justify-center">
+            <section class="min-h-screen flex flex-col items-center px-4 md:px-6 pt-24 lg:pt-32 z-[1] w-<1/4>">
+                <a class="border-b border-white pb-6 mb-6 last:border-b-0 w-full" href="post.html?post=2">
                     <article>
                         <h2 class="text-xl font-semibold text-white mb-2">The Hidden Backdoor in XZ Utils: A Silent Betrayal of Open-Source Trust</h2>
                         <p class="text-gray mb-3">The unsettling story of how a malicious open-source contributor tried to install malicious code on millions of computers.</p>
-</p>
                         <div class="flex items-center text-sm text-gray">
-                            <span>3 min read</span>
+                            <span>2 min read</span>
                         </div>
-                    </article
+                    </article>
                 </a>
-                <a class="border-b border-white pb-6 mb-6 last:border-b-0" href="post.html?post=1">
+                <a class="border-b border-white pb-6 mb-6 last:border-b-0 w-full" href="post.html?post=1">
                     <article>
                         <h2 class="text-xl font-semibold text-white mb-2">The Man Who Dreamed in an Unkown Language</h2>
                         <p class="text-gray mb-3">Exploring the incredible story of Marc Liblin, the man who dreamed in an unkown language.</p>
                         <div class="flex items-center text-sm text-gray">
                             <span>4 min read</span>
                         </div>
-                    </article
+                    </article>
                 </a>
             </section>
         </main>
