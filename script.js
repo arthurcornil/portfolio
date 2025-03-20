@@ -23,11 +23,21 @@ projects.set('propic', {
     link: "https://propic-livid.vercel.app",
     stack: ['SvelteKit', 'Tailwind']
 });
+projects.set('owm', {
+    title: 'Orbital Washing Machine',
+    subtitle: 'Mini-jeu',
+    source: 'owm.png',
+    description: "Orbital Washing Machine est un mini-jeu dans lequel le joueur doit maintenir une machine à laver en orbite. Le jeu est développé en C avec la librairie Raylib.",
+    link: "https://github.com/arthurcornil/orbital-washing-machine",
+    stack: ['C', 'Raylib']
+});
 
 const techStack = new Map();
 techStack.set('SvelteKit', 'bg-orange-600');
 techStack.set('Tailwind', 'bg-blue-600');
 techStack.set('Symfony', 'bg-blue-800');
+techStack.set('C', 'bg-blue-600');
+techStack.set('Raylib', 'bg-slate-950');
 
 function wave() {
     const hand = document.querySelector('#hand');
