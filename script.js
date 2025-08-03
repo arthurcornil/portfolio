@@ -31,6 +31,14 @@ projects.set('owm', {
     link: "https://github.com/arthurcornil/orbital-washing-machine",
     stack: ['C', 'Raylib']
 });
+projects.set('fdf', {
+    title: 'FDF',
+    subtitle: 'Visualisation 3D fil de fer',
+    source: 'fdf.png',
+    description: "Projet réalisé à l'école 42 consistant à afficher des modèles 3D fil de fer (wireframe) à partir de fichiers de données. Le programme, développé en C, lit et interprète des fichiers de coordonnées pour générer une représentation graphique interactive.",
+    link: "https://github.com/arthurcornil/fdf",
+    stack: ['C']
+});
 
 const techStack = new Map();
 techStack.set('SvelteKit', 'bg-orange-600');
