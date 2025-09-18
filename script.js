@@ -15,14 +15,14 @@ projects.set('scouts', {
     link: "https://scoutsincourt.be",
     stack: ['Symfony']
 });
-projects.set('propic', {
-    title: 'ProPic',
-    subtitle: 'Outil de création de photo de profil',
-    source: 'propic.png',
-    description: "L'outil permet de facilement et rapidement créer une photo de profil professionnelle. L'utilisateur upload une photo de lui-même, le fond est supprimé et remplacé par une couleur au choix. ProPic est complètement gratuit et open source.",
-    link: "https://propic-livid.vercel.app",
-    stack: ['SvelteKit', 'Tailwind']
-});
+//projects.set('propic', {
+//    title: 'ProPic',
+//    subtitle: 'Outil de création de photo de profil',
+//    source: 'propic.png',
+//    description: "L'outil permet de facilement et rapidement créer une photo de profil professionnelle. L'utilisateur upload une photo de lui-même, le fond est supprimé et remplacé par une couleur au choix. ProPic est complètement gratuit et open source.",
+//    link: "https://propic-livid.vercel.app",
+//    stack: ['SvelteKit', 'Tailwind']
+//});
 projects.set('owm', {
     title: 'Orbital Washing Machine',
     subtitle: 'Mini-jeu',
