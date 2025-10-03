@@ -79,4 +79,5 @@ function startAnimation() {
   startTime = null;
   animationId = requestAnimationFrame(animate);
 }
+startAnimation();
 interactiveHeroText.addEventListener('mouseover', startAnimation);
