@@ -31,6 +31,38 @@
             }
         }
         </script>
+		<style>
+			:root{
+				--dot-size: 10px;
+				--grid-gap: 100px;
+				--dot-color: rgba(0,0,0,0.14);
+				--bg-color: #ffffff;
+			}
+
+			.dot-grid{
+				background-image:
+					radial-gradient(circle, var(--dot-color) calc(var(--dot-size) / 2), transparent calc(var(--dot-size) / 2 + 0.5px));
+				background-size: var(--grid-gap) var(--grid-gap);
+				background-position: 20px 50px;
+			}
+			.full-screen {
+				min-height: 100vh;
+				display:flex;
+				align-items:center;
+				justify-content:center;
+			}
+			.text-outline-white {
+				text-shadow:
+					-5px -5px 0 #112127,
+					5px -5px 0 #112127,
+					-5px  5px 0 #112127,
+					5px  5px 0 #112127,
+					0px  -5px 0 #112127,
+					0px   5px 0 #112127,
+					-5px   0px 0 #112127,
+					5px   0px 0 #112127;
+			}
+		</style>
     </head>
     <body class="bg-black">
         <!-- Responsive Navigation -->
@@ -74,23 +106,37 @@
 
         <main class="relative flex flex-col gap-12">
             <!-- Background animations -->
-            <div class="absolute w-screen h-fit overflow-x-hidden overflow-y-visible pointer-events-none z-[0]" style="height: 200vh">
+            <!--<div class="absolute w-screen h-fit overflow-x-hidden overflow-y-visible pointer-events-none z-[0]" style="height: 200vh">
                 <div class="bg-primary h-40 w-40 rounded-full absolute blur-3xl top-32" style="animation: move1 8s infinite alternate ease-in-out"></div>
                 <div class="bg-primary h-72 w-72 rounded-full absolute blur-3xl top-72 lg:top-96 right-[-150px] lg:right-10" style="animation: move2 10s infinite alternate ease-in-out"></div>
                 <div class="bg-primary h-56 w-56 rounded-full absolute blur-3xl top-[500px] left-20 hidden lg:block" style="animation: move3 12s infinite alternate ease-in-out"></div>
-            </div>
+			</div>-->
             <!-- Hero Section -->
-            <section class="min-h-screen flex flex-col items-center justify-center gap-14 px-4 md:px-6 pt-20 lg:pt-32 z-[1]">
-                <div class="flex flex-col items-center text-center">
-                    <h1 class="text-4xl md:text-7xl text-white font-extrabold">Je suis Arthur,</h1>
-                    <h1 class="text-4xl md:text-7xl text-primary font-extrabold">développeur<span class="text-white">.</span></h1>
-                    <p class="text-gray text-lg md:text-xl max-w-[300px] md:max-w-[350px] pt-6">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
+            <section class="min-h-screen flex flex-col items-center justify-center gap-14 px-4 md:px-6 pt-20 lg:pt-32 z-[1] dot-grid full-screen">
+                <div class="flex flex-col items-center text-center z-10" id="interactiveHeroText">
+                    <h1 class="text-5xl md:text-7xl text-white font-extrabold">Je suis Arthur,</h1>
+					<div class="relative">
+						<svg id="bouncy-svg" viewBox="0 0 32 12" class="absolute z-10 md:top-[-6px] top-0">
+							<path
+								id="bouncy-path"
+								stroke="#439CBC"
+								fill="transparent"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								d="M 2,6 Q 16,4 30,6" />
+						</svg>
+						<h1 class="relative text-5xl md:text-7xl text-white font-extrabold z-20 
+							[text-shadow:-5px_-5px_0_#112127,0px_-5px_0_#112127,5px_-5px_0_#112127,-5px_0px_0_#112127,5px_0px_0_#112127,-5px_5px_0_#112127,0px_5px_0_#112127,5px_5px_0_#112127]" >
+							développeur.
+						</h1>
+					</div>
+                    <p class="text-gray text-md md:text-lg max-w-[300px] md:max-w-[350px] pt-10 z-10">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
                 </div>
-                <a class="w-52 h-14 flex justify-center items-center bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white" href="#contact">
+                <a class="w-52 h-14 flex justify-center items-center bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-black z-10" href="#contact">
                     Me contacter
                 </a>
                 <a href="#about">
-                    <img src="assets/arrow.png" alt="" class="relative top-24 md:top-32 animate-bounce"/>
+                    <img src="assets/arrow.png" alt="" class="relative top-20 animate-bounce"/>
                 </a>
             </section>
 
@@ -105,7 +151,7 @@
                     <p class="text-gray text-lg lg:text-xl max-w-[40rem]">Je suis spécialisé dans le développement web mais aussi mordu d'algorithmique, de computer graphics et de bien d'autres sujets.</p>
                     <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
                         onclick="wave();">
-                        <i class="fa-solid fa-hand text-white"></i>
+                        <i class="fa-solid fa-hand text-black"></i>
                     </button>
                 </div>
                 <img src="assets/arthur.png" alt="" class="max-w-full lg:max-w-[350px]"/>
@@ -121,7 +167,7 @@
                     <p class="text-gray text-lg lg:text-xl max-w-[40rem] lg:max-w-[30rem]">Découvrez mes derniers projets. Certains sont des side projects et d'autres sont réalisés en freelance.</p>
                     <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
                         onclick="animateSticker();">
-                        <i class="fa-solid fa-arrow-rotate-right text-white"></i>
+                        <i class="fa-solid fa-arrow-rotate-right text-black"></i>
                     </button>
                 </div>
                 <div class="relative grid grid-cols-2 md:grid-cols-3 gap-7 p-12 lg:p-14 rounded-2xl bg-gray bg-opacity-10 max-w-full">
@@ -147,7 +193,7 @@
                     <label for="message" class="text-white w-full text-lg">Message
                         <textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" placeholder="Votre message ..." rows="10" name="message" required></textarea>
                     </label>
-                    <button type="submit" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-white">
+                    <button type="submit" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-black">
                         Envoyer
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>
@@ -186,5 +232,7 @@
         </div>
     </body>
     <script src="triggerMenu.js"></script>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
+    <script src="interactions.js"></script>
+    <script src="background.js"></script>
 </html>

@@ -19,10 +19,10 @@ html {
     100% { transform: translateX(600px) translateY(-400px); }
 }
 @keyframes wave {
-    0% { transform: rotate(0deg); }
-    20% { transform: rotate(-30deg); }
-    60% { transform: rotate(50deg); }
-    100% { transform: rotate(0deg); }
+    0% { transform: rotate(0deg) scale(1.2); }
+    20% { transform: rotate(-30deg) scale(1.5); }
+    60% { transform: rotate(50deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1); }
 }
 @keyframes spin {
     0% { transform: rotate(12deg); }
