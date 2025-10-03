@@ -62,4 +62,8 @@ html {
 .spin {
     animation: spin 1s ease-in-out;
 }
-
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
