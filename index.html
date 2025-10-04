@@ -34,8 +34,8 @@
 		<style>
 			:root{
 				--dot-size: 10px;
-				--grid-gap: 100px;
-				--dot-color: rgba(0,0,0,0.14);
+				--grid-gap: 120px;
+				--dot-color: rgba(67,156,188,0.07);
 				--bg-color: #ffffff;
 			}
 
@@ -43,7 +43,6 @@
 				background-image:
 					radial-gradient(circle, var(--dot-color) calc(var(--dot-size) / 2), transparent calc(var(--dot-size) / 2 + 0.5px));
 				background-size: var(--grid-gap) var(--grid-gap);
-				background-position: 20px 50px;
 			}
 			.full-screen {
 				min-height: 100vh;
@@ -116,7 +115,7 @@
                 <div class="flex flex-col items-center text-center z-10" id="interactiveHeroText">
                     <h1 class="text-5xl md:text-7xl text-white font-extrabold">Je suis Arthur,</h1>
 					<div class="relative">
-						<svg id="bouncy-svg" viewBox="0 0 32 12" class="absolute z-10 md:top-[-6px] top-0">
+						<svg id="bouncy-svg" viewBox="0 0 32 12" class="absolute z-10 top-0">
 							<path
 								id="bouncy-path"
 								stroke="#439CBC"

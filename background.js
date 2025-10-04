@@ -40,15 +40,12 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
 	  
 	  function parseColor(colorStr) {
 		const match = colorStr.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
-		if (match) {
 		  return {
 			r: parseInt(match[1]),
 			g: parseInt(match[2]),
 			b: parseInt(match[3]),
 			a: match[4] ? parseFloat(match[4]) : 1
 		  };
-		}
-		return { r: 0, g: 0, b: 0, a: 0.12 };
 	  }
 	  
 	  const color = parseColor(dotColor);
@@ -70,7 +67,7 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
 			
 			let scale = 1;
 			if (distance < influenceRadius) {
-			  scale = 1 + (4 * (1 - distance / influenceRadius));
+			  scale = 1 + (6 * (1 - distance / influenceRadius));
 			}
 			
 			const dotSize = baseDotSize * scale;

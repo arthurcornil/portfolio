@@ -3,15 +3,15 @@ const path = document.getElementById('bouncy-path');
 
 const keyframes = [
   { y: 2, easing: 'ease-in' },
-  { y: 10, easing: 'ease-out' },
+  { y: 11, easing: 'ease-out' },
   { y: 0, easing: 'ease-in' }, 
-  { y: 8, easing: 'ease-out' },
+  { y: 9, easing: 'ease-out' },
   { y: 2, easing: 'ease-out' },
-  { y: 6, easing: 'ease-out' },
+  { y: 7.5, easing: 'ease-out' },
   { y: 4, easing: 'ease-out' }
 ];
 
-const timings = [0, 100, 250, 450, 650, 900, 1200];
+const timings = [0, 100, 250, 450, 650, 900, 1100];
 
 let currentFrame = 0;
 let startTime = null;
