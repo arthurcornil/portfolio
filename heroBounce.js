@@ -2,16 +2,16 @@ const svg = document.getElementById('bouncy-svg');
 const path = document.getElementById('bouncy-path');
 
 const keyframes = [
-  { y: 2, easing: 'ease-in' },
+  { y: 4, easing: 'ease-in' },
   { y: 11, easing: 'ease-out' },
   { y: 0, easing: 'ease-in' }, 
   { y: 9, easing: 'ease-out' },
-  { y: 2, easing: 'ease-out' },
-  { y: 7.5, easing: 'ease-out' },
-  { y: 4, easing: 'ease-out' }
+  { y: 2, easing: 'ease-in' },
+  { y: 8, easing: 'ease-out' },
+  { y: 4, easing: 'ease-in' },
 ];
 
-const timings = [0, 100, 250, 450, 650, 900, 1100];
+const timings = [0, 250, 500, 650, 950, 1100, 1300];
 
 let currentFrame = 0;
 let startTime = null;
