@@ -65,7 +65,7 @@
     </head>
     <body class="bg-black">
         <!-- Responsive Navigation -->
-        <nav class="fixed z-50 w-screen backdrop-blur-md z-[2]">
+        <nav class="fixed z-50 w-screen backdrop-blur-md z-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20 items-center">
                     <a class="flex items-center gap-2" href="#top">
@@ -129,7 +129,7 @@
 							développeur.
 						</h1>
 					</div>
-                    <p class="text-gray text-md md:text-lg max-w-[300px] md:max-w-[350px] pt-10 z-10">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
+                    <p class="text-gray text-md md:text-lg max-w-[300px] md:max-w-[350px] pt-14 z-10">Je suis un développeur passionné, curieux qui aime apprendre et créer.</p>
                 </div>
                 <a class="w-52 h-14 flex justify-center items-center bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-black z-10" href="#contact">
                     Me contacter
@@ -139,65 +139,81 @@
                 </a>
             </section>
 
-            <!-- About Section -->
-            <section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 flex flex-col-reverse lg:flex-row items-center justify-around gap-10" id="about">
-                <div class="flex flex-col gap-5">
-                    <div>
-                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold">Hello ! <span id="hand" class="inline-block">👋</span></h2>
-                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
-                    </div>
-                    <p class="text-gray text-lg lg:text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique. J'aime résoudre des problèmes et concevoir des systèmes de A à Z.</p>
-                    <p class="text-gray text-lg lg:text-xl max-w-[40rem]">Je suis spécialisé dans le développement web mais aussi mordu d'algorithmique, de computer graphics et de bien d'autres sujets.</p>
-                    <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
-                        onclick="wave();">
-                        <i class="fa-solid fa-hand text-black"></i>
-                    </button>
-                </div>
-                <img src="assets/arthur.png" alt="" class="max-w-full lg:max-w-[350px]"/>
-            </section>
+			<!-- Parallaxed Section -->
+			<div id="parallaxedSection" class="z-20">
+				<!-- Separator -->
+				<svg viewBox="0 0 1512 237" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative top-1 w-full h-auto" preserveAspectRatio="none">
+					<path d="M1 112.666C1.11654 112.285 77.0867 -136.142 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.664 554.429 72.1079 638 112.666C663 40.1671 736.5 36.1671 756.5 112.666C786.001 66.6668 989.5 51.167 1030.5 112.666C1019 34.667 1083 3.66731 1134.25 112.666C1160.5 58.167 1305.5 55.6671 1323.12 112.666C1394.5 23.2828 1435.69 17.0535 1512 112.666V236.666H1V112.666Z" fill="url(#paint0_linear_180_20)"/>
+					<path d="M1 112.666C1.11654 112.285 77.0867 -136.142 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.664 554.429 72.1079 638 112.666C663 40.1671 736.5 36.1671 756.5 112.666C786.001 66.6668 989.5 51.167 1030.5 112.666C1019 34.667 1083 3.66731 1134.25 112.666C1160.5 58.167 1305.5 55.6671 1323.12 112.666C1394.5 23.2828 1435.69 17.0535 1512 112.666V236.666H1V112.666Z" stroke="white" stroke-width="0"/>
+					<path d="M1 112.666C1 112.666 77 -136.333 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.6643 554.429 72.1082 638 112.666C663 40.1669 736.5 36.1669 756.5 112.666C786 66.6669 989.5 51.1669 1030.5 112.666C1019 34.6669 1083 3.66695 1134.25 112.666C1160.5 58.1669 1305.5 55.6669 1323.13 112.666C1394.51 23.2829 1435.69 17.0535 1512 112.666" stroke="white" stroke-width="4" id="separator" stroke-linecap="round"/>
+					<defs>
+						<linearGradient id="paint0_linear_180_20" x1="778" y1="237" x2="778" y2="87.5" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#112127"/>
+							<stop offset="1" stop-color="#13242A"/>
+						</linearGradient>
+					</defs>
+				</svg>
+				<!-- About Section -->
+				<section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 flex flex-col-reverse lg:flex-row items-center justify-around gap-10 bg-black" id="about">
+					<div class="flex flex-col gap-5">
+						<div>
+							<h2 class="text-3xl lg:text-5xl text-white font-extrabold">Hello ! <span id="hand" class="inline-block">👋</span></h2>
+							<h2 class="text-3xl lg:text-5xl text-white font-extrabold">Moi c'est <span class="text-primary">Arthur</span>.</h2>
+						</div>
+						<p class="text-gray text-lg lg:text-xl max-w-[40rem]">J'ai 23 ans et je suis passioné d'informatique. J'aime résoudre des problèmes et concevoir des systèmes de A à Z.</p>
+						<p class="text-gray text-lg lg:text-xl max-w-[40rem]">Je suis spécialisé dans le développement web mais aussi mordu d'algorithmique, de computer graphics et de bien d'autres sujets.</p>
+						<button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
+							onclick="wave();">
+							<i class="fa-solid fa-hand text-black"></i>
+						</button>
+					</div>
+					<img src="assets/arthur.png" alt="" class="max-w-full lg:max-w-[350px]"/>
+				</section>
 
-            <!-- Projects Section -->
-            <section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 flex flex-col lg:flex-row items-center justify-around gap-10" id="projects">
-                <div class="flex flex-col gap-5">
-                    <div>
-                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold">Je construis du</h2>
-                        <h2 class="text-3xl lg:text-5xl text-white font-extrabold"><span class="text-primary">software</span>.</h2>
-                    </div>
-                    <p class="text-gray text-lg lg:text-xl max-w-[40rem] lg:max-w-[30rem]">Découvrez mes derniers projets. Certains sont des side projects et d'autres sont réalisés en freelance.</p>
-                    <button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
-                        onclick="animateSticker();">
-                        <i class="fa-solid fa-arrow-rotate-right text-black"></i>
-                    </button>
-                </div>
-                <div class="relative grid grid-cols-2 md:grid-cols-3 gap-7 p-12 lg:p-14 rounded-2xl bg-gray bg-opacity-10 max-w-full">
-                    <img src="assets/sticker.png" alt="" id="sticker" class="absolute lg:top-[-85px] lg:left-[-85px] right-[-20px] top-[-40px] size-24 lg:size-40 rotate-12 block"/>
-                    <img src="assets/troopflow.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('troopflow');"/>
-                    <img src="assets/scouts.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('scouts');"/>
-                    <img src="assets/owm.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('owm');"/>
-                    <img src="assets/fdf.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('fdf');"/>
-                </div>
-            </section>
-            <section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 items-center flex flex-col gap-5" id="contact">
-                <h1 class="text-5xl text-white font-extrabold">Construisons votre <span class="text-primary">projet</span> !</h1>
-                <p class="text-gray text-lg">Vous pouvez aussi m'envoyer un mail si vous préférez : <a class="underline" href="mailto:arthur@buildthe.world">arthur@buildthe.world</a></p>
-                <form action="" class="flex flex-col gap-4 w-full lg:w-[800px] pt-10 items-end" onsubmit="(async () => { await sendMessage(event, this); })(); return false;">
-                    <div class="flex flex-col lg:flex-row gap-4 w-full">
-                        <label for="name" class="text-white flex-grow text-lg">Nom
-                            <input class="mt-2 border border-gray rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" type="text" placeholder="Aaron Swartz" name="name" required>
-                        </label>
-                        <label for="email" class="text-white flex-grow text-lg">Adresse e-mail
-                            <input class="mt-2 border border-gray rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" type="email" placeholder="aaron.swartz@mail.com" name="email" required>
-                        </label>
-                    </div>
-                    <label for="message" class="text-white w-full text-lg">Message
-                        <textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" placeholder="Votre message ..." rows="10" name="message" required></textarea>
-                    </label>
-                    <button type="submit" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-black">
-                        Envoyer
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
-            </section>
+				<!-- Projects Section -->
+				<section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 flex flex-col lg:flex-row items-center justify-around gap-10" id="projects">
+					<div class="flex flex-col gap-5">
+						<div>
+							<h2 class="text-3xl lg:text-5xl text-white font-extrabold">Je construis du</h2>
+							<h2 class="text-3xl lg:text-5xl text-white font-extrabold"><span class="text-primary">software</span>.</h2>
+						</div>
+						<p class="text-gray text-lg lg:text-xl max-w-[40rem] lg:max-w-[30rem]">Découvrez mes derniers projets. Certains sont des side projects et d'autres sont réalisés en freelance.</p>
+						<button class="button w-14 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-full text-xl font-extrabold text-white"
+							onclick="animateSticker();">
+							<i class="fa-solid fa-arrow-rotate-right text-black"></i>
+						</button>
+					</div>
+					<div class="relative grid grid-cols-2 md:grid-cols-3 gap-7 p-12 lg:p-14 rounded-2xl bg-gray bg-opacity-10 max-w-full">
+						<img src="assets/sticker.png" alt="" id="sticker" class="absolute lg:top-[-85px] lg:left-[-85px] right-[-20px] top-[-40px] size-24 lg:size-40 rotate-12 block"/>
+						<img src="assets/troopflow.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('troopflow');"/>
+						<img src="assets/scouts.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('scouts');"/>
+						<img src="assets/owm.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('owm');"/>
+						<img src="assets/fdf.png" alt="" class="max-w-full lg:max-w-[200px] hover:scale-110 transition-all cursor-pointer" onclick="openModal('fdf');"/>
+					</div>
+				</section>
+				<section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 items-center flex flex-col gap-5" id="contact">
+					<h1 class="text-5xl text-white font-extrabold">Construisons votre <span class="text-primary">projet</span> !</h1>
+					<p class="text-gray text-lg">Vous pouvez aussi m'envoyer un mail si vous préférez : <a class="underline" href="mailto:arthur@buildthe.world">arthur@buildthe.world</a></p>
+					<form action="" class="flex flex-col gap-4 w-full lg:w-[800px] pt-10 items-end" onsubmit="(async () => { await sendMessage(event, this); })(); return false;">
+						<div class="flex flex-col lg:flex-row gap-4 w-full">
+							<label for="name" class="text-white flex-grow text-lg">Nom
+								<input class="mt-2 border border-gray rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" type="text" placeholder="Aaron Swartz" name="name" required>
+							</label>
+							<label for="email" class="text-white flex-grow text-lg">Adresse e-mail
+								<input class="mt-2 border border-gray rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" type="email" placeholder="aaron.swartz@mail.com" name="email" required>
+							</label>
+						</div>
+						<label for="message" class="text-white w-full text-lg">Message
+							<textarea class="mt-2 border border-gray text-sm rounded-lg focus:border-primary block w-full p-4 bg-black placeholder-gray placeholder:text-lg text-white text-lg" placeholder="Votre message ..." rows="10" name="message" required></textarea>
+						</label>
+						<button type="submit" class="button w-52 h-14 bg-primary cursor-pointer select-none active:translate-y-4 active:[box-shadow:0_0px_0_0_#38809A,0_0px_0_0_#38809A] transition-all duration-150 [box-shadow:0_5px_0_0_#38809A,0_10px_0_0_#38809A] rounded-xl text-xl font-extrabold text-black">
+							Envoyer
+							<i class="fa-solid fa-paper-plane"></i>
+						</button>
+					</form>
+				</section>
+			</div>
+            
         </main>
         <dialog id="projectModal" class="p-10 rounded-xl bg-black text-white lg:max-w-[500px] max-w-[350px]">
             <div class="flex flex-col gap-5 items-start">
@@ -234,4 +250,5 @@
     <script src="main.js"></script>
     <script src="heroBounce.js"></script>
     <script src="background.js"></script>
+    <script src="parallax.js"></script>
 </html>
