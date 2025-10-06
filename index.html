@@ -50,22 +50,19 @@
 				align-items:center;
 				justify-content:center;
 			}
-			.text-outline-white {
-				text-shadow:
-					-5px -5px 0 #112127,
-					5px -5px 0 #112127,
-					-5px  5px 0 #112127,
-					5px  5px 0 #112127,
-					0px  -5px 0 #112127,
-					0px   5px 0 #112127,
-					-5px   0px 0 #112127,
-					5px   0px 0 #112127;
+			#separator {
+				stroke-width: 6;
+			}
+			@media (min-width: 768px) {
+				#separator {
+					stroke-width: 4;
+				}
 			}
 		</style>
     </head>
     <body class="bg-black">
         <!-- Responsive Navigation -->
-        <nav class="fixed z-50 w-screen backdrop-blur-md z-100">
+        <nav class="fixed z-50 w-screen backdrop-blur-md bg-black/70 z-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20 items-center">
                     <a class="flex items-center gap-2" href="#top">
@@ -124,8 +121,11 @@
 								stroke-linecap="round"
 								d="M 2,6 Q 16,4 30,6" />
 						</svg>
-						<h1 class="relative text-5xl md:text-7xl text-white font-extrabold z-20 
-							[text-shadow:-5px_-5px_0_#112127,0px_-5px_0_#112127,5px_-5px_0_#112127,-5px_0px_0_#112127,5px_0px_0_#112127,-5px_5px_0_#112127,0px_5px_0_#112127,5px_5px_0_#112127]" >
+						<h1 class="absolute text-5xl md:text-7xl text-white font-extrabold z-20"
+							style="-webkit-text-stroke: 10px #112127; text-stroke: 10px #112127;">
+							développeur.
+						</h1>
+						<h1 class="relative text-5xl md:text-7xl text-white font-extrabold z-30" >
 							développeur.
 						</h1>
 					</div>
@@ -142,17 +142,21 @@
 			<!-- Parallaxed Section -->
 			<div id="parallaxedSection" class="z-20">
 				<!-- Separator -->
-				<svg viewBox="0 0 1512 237" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative top-1 w-full h-auto" preserveAspectRatio="none">
-					<path d="M1 112.666C1.11654 112.285 77.0867 -136.142 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.664 554.429 72.1079 638 112.666C663 40.1671 736.5 36.1671 756.5 112.666C786.001 66.6668 989.5 51.167 1030.5 112.666C1019 34.667 1083 3.66731 1134.25 112.666C1160.5 58.167 1305.5 55.6671 1323.12 112.666C1394.5 23.2828 1435.69 17.0535 1512 112.666V236.666H1V112.666Z" fill="url(#paint0_linear_180_20)"/>
-					<path d="M1 112.666C1.11654 112.285 77.0867 -136.142 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.664 554.429 72.1079 638 112.666C663 40.1671 736.5 36.1671 756.5 112.666C786.001 66.6668 989.5 51.167 1030.5 112.666C1019 34.667 1083 3.66731 1134.25 112.666C1160.5 58.167 1305.5 55.6671 1323.12 112.666C1394.5 23.2828 1435.69 17.0535 1512 112.666V236.666H1V112.666Z" stroke="white" stroke-width="0"/>
-					<path d="M1 112.666C1 112.666 77 -136.333 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.6643 554.429 72.1082 638 112.666C663 40.1669 736.5 36.1669 756.5 112.666C786 66.6669 989.5 51.1669 1030.5 112.666C1019 34.6669 1083 3.66695 1134.25 112.666C1160.5 58.1669 1305.5 55.6669 1323.13 112.666C1394.51 23.2829 1435.69 17.0535 1512 112.666" stroke="white" stroke-width="4" id="separator" stroke-linecap="round"/>
-					<defs>
-						<linearGradient id="paint0_linear_180_20" x1="778" y1="237" x2="778" y2="87.5" gradientUnits="userSpaceOnUse">
-							<stop stop-color="#112127"/>
-							<stop offset="1" stop-color="#13242A"/>
-						</linearGradient>
-					</defs>
-				</svg>
+				<div class="overflow-hidden relative top-1">
+					<svg viewBox="0 0 1512 237" fill="none" xmlns="http://www.w3.org/2000/svg" 
+						class="block w-[200%] md:w-full h-auto origin-left transition-all duration-300" 
+						preserveAspectRatio="xMinYMid slice">
+						<path d="M1 112.666C1.11654 112.285 77.0867 -136.142 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.664 554.429 72.1079 638 112.666C663 40.1671 736.5 36.1671 756.5 112.666C786.001 66.6668 989.5 51.167 1030.5 112.666C1019 34.667 1083 3.66731 1134.25 112.666C1160.5 58.167 1305.5 55.6671 1323.12 112.666C1394.5 23.2828 1435.69 17.0535 1512 112.666V236.666H1V112.666Z" fill="url(#paint0_linear_180_20)"/>
+						<path d="M1 112.666C1.11654 112.285 77.0867 -136.142 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.664 554.429 72.1079 638 112.666C663 40.1671 736.5 36.1671 756.5 112.666C786.001 66.6668 989.5 51.167 1030.5 112.666C1019 34.667 1083 3.66731 1134.25 112.666C1160.5 58.167 1305.5 55.6671 1323.12 112.666C1394.5 23.2828 1435.69 17.0535 1512 112.666V236.666H1V112.666Z" stroke="white" stroke-width="0"/>
+						<path d="M1 112.666C1 112.666 77 -136.333 189.875 112.666C250 46.1669 378 39.6669 438 112.666C510.714 72.6643 554.429 72.1082 638 112.666C663 40.1669 736.5 36.1669 756.5 112.666C786 66.6669 989.5 51.1669 1030.5 112.666C1019 34.6669 1083 3.66695 1134.25 112.666C1160.5 58.1669 1305.5 55.6669 1323.13 112.666C1394.51 23.2829 1435.69 17.0535 1512 112.666" stroke="white" stroke-width="4" id="separator" stroke-linecap="round"/>
+						<defs>
+							<linearGradient id="paint0_linear_180_20" x1="778" y1="237" x2="778" y2="87.5" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#112127"/>
+								<stop offset="1" stop-color="#13242A"/>
+							</linearGradient>
+						</defs>
+					</svg>
+				</div>
 				<!-- About Section -->
 				<section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 flex flex-col-reverse lg:flex-row items-center justify-around gap-10 bg-black" id="about">
 					<div class="flex flex-col gap-5">
@@ -251,4 +255,5 @@
     <script src="heroBounce.js"></script>
     <script src="background.js"></script>
     <script src="parallax.js"></script>
+    <script src="scroll.js"></script>
 </html>
