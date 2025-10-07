@@ -31,34 +31,6 @@
             }
         }
         </script>
-		<style>
-			:root{
-				--dot-size: 10px;
-				--grid-gap: 120px;
-				--dot-color: rgba(67,156,188,0.07);
-				--bg-color: #ffffff;
-			}
-
-			.dot-grid{
-				background-image:
-					radial-gradient(circle, var(--dot-color) calc(var(--dot-size) / 2), transparent calc(var(--dot-size) / 2 + 0.5px));
-				background-size: var(--grid-gap) var(--grid-gap);
-			}
-			.full-screen {
-				min-height: 100vh;
-				display:flex;
-				align-items:center;
-				justify-content:center;
-			}
-			#separator {
-				stroke-width: 6;
-			}
-			@media (min-width: 768px) {
-				#separator {
-					stroke-width: 4;
-				}
-			}
-		</style>
     </head>
     <body class="bg-black">
         <!-- Responsive Navigation -->
@@ -196,8 +168,18 @@
 					</div>
 				</section>
 				<section class="min-h-fit py-16 lg:py-40 px-4 lg:px-40 items-center flex flex-col gap-5" id="contact">
-					<h1 class="text-5xl text-white font-extrabold">Construisons votre <span class="text-primary">projet</span> !</h1>
-					<p class="text-gray text-lg">Vous pouvez aussi m'envoyer un mail si vous préférez : <a class="underline" href="mailto:arthur@buildthe.world">arthur@buildthe.world</a></p>
+					<div class="relative">
+						<h1 class="relative text-5xl md:text-7xl text-white font-extrabold z-30 appearing-title">Construisons votre projet</h1>
+						<svg viewBox="0 0 40 4" class="absolute z-10 top-20 md:top-7 tracing-svg">
+							<path
+								stroke="#439CBC75"
+								fill="transparent"
+								stroke-width="2.5"
+								stroke-linecap="butt"
+								d="M 3,2 Q 18,1 38,2" />
+						</svg>
+					</div>
+					<p class="text-gray text-lg mt-10">Vous pouvez aussi m'envoyer un mail si vous préférez : <a class="underline" href="mailto:arthur@buildthe.world">arthur@buildthe.world</a></p>
 					<form action="" class="flex flex-col gap-4 w-full lg:w-[800px] pt-10 items-end" onsubmit="(async () => { await sendMessage(event, this); })(); return false;">
 						<div class="flex flex-col lg:flex-row gap-4 w-full">
 							<label for="name" class="text-white flex-grow text-lg">Nom
@@ -256,4 +238,41 @@
     <script src="background.js"></script>
     <script src="parallax.js"></script>
     <script src="scroll.js"></script>
+	<script>
+	document.addEventListener("DOMContentLoaded", () => {
+	  const svg = document.querySelector(".tracing-svg");
+	  const path = svg.querySelector("path");
+
+	  const pathLength = path.getTotalLength();
+	  path.style.strokeDasharray = pathLength;
+	  path.style.strokeDashoffset = pathLength;
+
+	  function updateStroke() {
+		const rect = svg.getBoundingClientRect();
+		const windowHeight = window.innerHeight;
+
+		const triggerPointUnderline = windowHeight * 0.5;
+
+		let scrollProgress = (triggerPointUnderline - rect.top) / triggerPointUnderline;
+		scrollProgress = Math.max(0, Math.min(1, scrollProgress * 2)); // clamp 0-1
+
+		path.style.strokeDashoffset = pathLength * (1 - scrollProgress);
+	  }
+
+		const appearingTitle = document.querySelector(".appearing-title");
+		const triggerPointTitle = window.innerHeight * 0.60;
+		document.addEventListener("scroll", () => {
+			const rectTitle = appearingTitle.getBoundingClientRect();
+			console.log(rectTitle.top, triggerPointTitle);
+			if (rectTitle.top < triggerPointTitle && !appearingTitle.classList.contains("active"))
+				appearingTitle.classList.add("active");
+			else if (rectTitle.top > triggerPointTitle && appearingTitle.classList.contains("active"))
+				appearingTitle.classList.remove("active");
+		});
+
+	  window.addEventListener("scroll", updateStroke);
+	  window.addEventListener("resize", updateStroke);
+	  updateStroke();
+	});
+	</script>
 </html>
