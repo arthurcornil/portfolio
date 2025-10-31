@@ -1,7 +1,7 @@
 const NAV_HEIGHT = 80;
 
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('nav a, .prevent-select a');
+	const navLinks = document.querySelectorAll('nav a[href^="#"], .prevent-select a[href^="#"]');
 
 	window.scrollTo({
 		top: 1,
