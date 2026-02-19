@@ -1,4 +1,12 @@
 const projects = new Map();
+projects.set('zell', {
+    title: 'Zell',
+    subtitle: 'Libraire TUI en Zig',
+    source: 'zell.png',
+    description: "Zell est un projet que j'ai entrepris dans le but d'en apprendre plus sur le langage Zig. Il s'agit d'une libraire permettant de créer des TUIs (Terminal User Interface) minimalistes.",
+    link: "https://github.com/arthurcornil/zell",
+    stack: ['Zig']
+});
 projects.set('troopflow', {
     title: 'Troopflow',
     subtitle: 'Plateforme de gestion pour les unités scoutes',
@@ -46,6 +54,7 @@ techStack.set('Tailwind', 'bg-blue-600');
 techStack.set('Symfony', 'bg-blue-800');
 techStack.set('C', 'bg-blue-600');
 techStack.set('Raylib', 'bg-slate-950');
+techStack.set('Zig', 'bg-orange-700');
 
 function wave() {
     const hand = document.querySelector('#hand');
